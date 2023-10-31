@@ -121,7 +121,6 @@ main{
     margin-top: 5rem;
     color:white ;
     position: relative;
-    overflow: hidden;
 
 }
 
@@ -157,7 +156,6 @@ main{
     border-radius: 50%;
     transition: ease 0.3s;
     cursor: pointer;
-    margin: 2rem;
 
 }
 .carousel .controls .control:hover {
@@ -232,7 +230,7 @@ main{
 }
 
 .sec1 .content {
-   width: calc(100% - 30rem);
+   width: 80%;
     margin: 0 auto;
     padding: 2rem;
     display: flex;
@@ -242,7 +240,7 @@ main{
 }
 
 .content div {
-    width: 20%;
+    width: 40%;
     
     display: flex;
     flex-direction: column;
@@ -255,12 +253,52 @@ main{
     font-size: .8rem;
 }
 
+@media  screen and (max-width:800px) {
+    .sec1 img{
+        display: none;
+    }
+
+    .sec1 div{
+       width: 100%;
+    }
+    .sec1 div p{
+        width: 90%;
+     }
+     .slide > div{
+        align-items: start;
+        margin-top: 0;
+     }
+     .slide:nth-child(1){
+        background-image: url('./assets/x.png');
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: 20rem;
+     }
+
+     .slide:nth-child(2){
+        background-image: url('./assets/i13.png');
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: 20rem;
+     }     .slide:nth-child(3){
+        background-image: url('./assets/i15.png');
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: 20rem;
+     }
+
+     .content{
+        background-image: url('./assets/6.png');
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: 15rem;
+     }
+}
 
 .sec2{
     width: 100%;
    
     z-index: 10;
-    height: 9rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -375,7 +413,7 @@ li.active{
 
 
 .items .item{
-    width: 10rem;
+    min-width: 20%;
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -524,6 +562,7 @@ li.active{
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    margin: 3rem 0;
 }
 
 .sec5 > div > .item{
